@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            max-width: 1440px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+
+            
+        }
+        aside{
+            width: 250px;
+            height: 100vh;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            padding: 20px;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: all 0.3s;
+        }
+        h1{
+            font-size: 40px;
+        }
+        span{
+            border-bottom: 2px solid #000;
+            margin-bottom: 20px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: #ccc;
+        }
+        label{
+            position: absolute;
+
+        }
+        input{
+            background-color: #000;
+            position: relative;
+            left: 400px;
+            display: none;
+        }
+        input:checked ~ aside{
+            position: absolute;
+            right: -500px;
+        }
+       input:checked ~ label{
+            right: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <label for="check">Open</label>
+        <input type="checkbox"id="check">
+    <aside>
+        <h1>Home</h1>
+        <span></span>
+        <ul>
+            <li><a href="">Data</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Logo</a></li>
+        </ul>
+    </aside>
+</body>
+</html>
